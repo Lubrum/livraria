@@ -1,4 +1,4 @@
-package br.com.caelum.livraria.bean;
+package com.caelum.livraria.bean;
 
 import java.io.Serializable;
 import java.util.List;
@@ -8,10 +8,9 @@ import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import com.caelum.livraria.modelo.Venda;
 import org.primefaces.model.chart.BarChartModel;
 import org.primefaces.model.chart.ChartSeries;
-
-import br.com.caelum.livraria.modelo.Venda;
 
 @Named
 @ViewScoped

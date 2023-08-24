@@ -18,7 +18,7 @@
         <option name="version" value="8.5.84.0" />
       </TomcatInfo>
     </option>
-    <option name="vmOptions" value="-Durl=jdbc:mysql://localhost:3311/livrariadb -Duser=wplexeo -Dpassword=wplexeo" />
+    <option name="vmOptions" value="-Durl=jdbc:mysql://localhost:3310/livrariadb -Duser=root -Dpassword=123" />
     <module name="livraria-cdi" />
     <method v="2">
       <option name="Make" enabled="true" />

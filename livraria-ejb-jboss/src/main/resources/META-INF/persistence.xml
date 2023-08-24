@@ -8,10 +8,10 @@
 
 		<jta-data-source>java:/livraria-ds</jta-data-source>
 
-		<class>br.com.caelum.livraria.modelo.Usuario</class>
-		<class>br.com.caelum.livraria.modelo.Livro</class>
-		<class>br.com.caelum.livraria.modelo.Autor</class>
-		<class>br.com.caelum.livraria.modelo.Venda</class>
+		<class>com.caelum.livraria.modelo.Usuario</class>
+		<class>com.caelum.livraria.modelo.Livro</class>
+		<class>com.caelum.livraria.modelo.Autor</class>
+		<class>com.caelum.livraria.modelo.Venda</class>
 
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="update" />

@@ -1,4 +1,4 @@
-package br.com.caelum.livraria.dao;
+package com.caelum.livraria.dao;
 
 import java.io.Serializable;
 import java.util.List;

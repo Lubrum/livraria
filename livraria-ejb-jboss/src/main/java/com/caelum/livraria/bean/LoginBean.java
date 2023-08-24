@@ -1,4 +1,4 @@
-package br.com.caelum.livraria.bean;
+package com.caelum.livraria.bean;
 
 import java.io.Serializable;
 
@@ -8,8 +8,8 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import br.com.caelum.livraria.dao.UsuarioDao;
-import br.com.caelum.livraria.modelo.Usuario;
+import com.caelum.livraria.dao.UsuarioDao;
+import com.caelum.livraria.modelo.Usuario;
 
 @Named
 @ViewScoped
@@ -20,7 +20,7 @@ public class LoginBean implements Serializable {
 	private final Usuario usuario = new Usuario();
 
 	@Inject
-	UsuarioDao dao;
+    UsuarioDao dao;
 
 	@Inject
 	FacesContext context;

@@ -1,4 +1,4 @@
-package br.com.caelum.livraria.modelo;
+package com.caelum.livraria.modelo;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

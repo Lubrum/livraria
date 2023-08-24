@@ -1,4 +1,4 @@
-package br.com.caelum.livraria.dao;
+package com.caelum.livraria.dao;
 
 import java.io.Serializable;
 
@@ -8,7 +8,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-import br.com.caelum.livraria.modelo.Usuario;
+import com.caelum.livraria.modelo.Usuario;
 
 @Stateless
 public class UsuarioDao implements Serializable {

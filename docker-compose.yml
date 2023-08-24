@@ -1,0 +1,20 @@
+version: '3.8'
+
+volumes:
+  db:
+    driver: local
+
+services:
+  db:
+    container_name: mariadb_livraria
+    image: mariadb:5.5.64
+    restart: always
+    volumes:
+        - ./lib:/var/lib/mysql
+        - ./init:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123
+      MYSQL_ROOT_PASSWORD: 123
+    ports:
+      - "3310:3306"

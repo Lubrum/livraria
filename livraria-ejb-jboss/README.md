@@ -1,7 +1,7 @@
 Pré-requisitos:
 
 - Java 8;
-- MySQL 5.x instalado (com ou sem Docker);
+- Docker e docker compose;
 - WildFly 10.0.0 instalado e configurado;
 
 Configurações manuais necessárias no WildFly 10 antes da execução:
@@ -41,7 +41,7 @@ Configurações manuais necessárias no WildFly 10 antes da execução:
         
         <!-- adicionar o trecho abaixo -->
         <datasource jndi-name="java:/livraria-ds" pool-name="livrariaDS" enabled="true" use-java-context="true">
-            <connection-url>jdbc:mysql://localhost:3311/livrariadb</connection-url>
+            <connection-url>jdbc:mysql://localhost:3311/livrariadb?createDatabaseIfNotExist=true</connection-url>
             <driver>com.mysql</driver>
             <pool>
                 <min-pool-size>10</min-pool-size>
@@ -49,7 +49,7 @@ Configurações manuais necessárias no WildFly 10 antes da execução:
                 <prefill>true</prefill>
             </pool>
             <security>
-                <user-name>user</user-name>
+                <user-name>root</user-name>
                 <password>123</password>
             </security>
         </datasource>
@@ -76,12 +76,20 @@ Como executar o projeto:
 
 *Observação: verifique no arquivo .sh se o caminho do WildFly (WILDFLY_PATH) esta correto.*
 
+1- executar via CLI a partir do diretório raíz (livraria_in-tomcat) o comando para subir o banco de dados mariadb via docker compose:
+
+```sh
+docker compose up -d
+```
+
 No IntelliJ:
 
 - executar 'run-with-wildfly'
 
-Via CLI:
+Ou, via CLI no diretório raíz:
 
+```sh
 ./run-wildfly.sh
+```
 
 *Observação: ao executar o projeto, o banco será criado vazio, adicione manualmente um usuário no banco de dados para testar o login e demais funcionalidades deste projeto de exemplo.*

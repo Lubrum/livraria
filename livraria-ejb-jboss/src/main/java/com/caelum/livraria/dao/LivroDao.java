@@ -1,4 +1,4 @@
-package br.com.caelum.livraria.dao;
+package com.caelum.livraria.dao;
 
 import java.io.Serializable;
 import java.util.List;
@@ -8,7 +8,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import br.com.caelum.livraria.modelo.Livro;
+import com.caelum.livraria.modelo.Livro;
 
 @Stateless
 public class LivroDao implements Serializable {

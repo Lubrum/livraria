@@ -1,4 +1,4 @@
-package br.com.caelum.livraria.util;
+package com.caelum.livraria.util;
 
 import javax.faces.application.NavigationHandler;
 import javax.faces.context.FacesContext;
@@ -6,7 +6,7 @@ import javax.faces.event.PhaseEvent;
 import javax.faces.event.PhaseId;
 import javax.faces.event.PhaseListener;
 
-import br.com.caelum.livraria.modelo.Usuario;
+import com.caelum.livraria.modelo.Usuario;
 
 public class Autorizador implements PhaseListener {
 
