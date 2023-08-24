@@ -1,0 +1,27 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="run-tomcat-spring" type="com.poratu.idea.plugins.tomcat">
+    <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+    <predefined_log_file enabled="true" id="Tomcat Access Log" />
+    <predefined_log_file id="Tomcat Catalina Log" />
+    <predefined_log_file id="Tomcat Manager Log" />
+    <predefined_log_file id="Tomcat Host Manager Log" />
+    <option name="contextPath" value="/" />
+    <option name="docBase" value="$PROJECT_DIR$/livraria-spring/src/main/webapp" />
+    <option name="envOptions">
+      <map />
+    </option>
+    <option name="extraClassPath" value="" />
+    <option name="tomcatInfo">
+      <TomcatInfo>
+        <option name="name" value="Apache Tomcat/8.5.84" />
+        <option name="path" value="/opt/apache-tomcat-8.5.84" />
+        <option name="version" value="8.5.84.0" />
+      </TomcatInfo>
+    </option>
+    <option name="vmOptions" value="-Durl=jdbc:mysql://localhost:3311/livrariadb -Duser=wplexeo -Dpassword=wplexeo" />
+    <module name="livraria-spring" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
