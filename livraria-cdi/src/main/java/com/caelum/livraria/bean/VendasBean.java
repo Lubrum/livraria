@@ -41,10 +41,6 @@ public class VendasBean implements Serializable {
 	}
 
 	public List<Venda> getVendas() {
-
-		List<Venda> vendas = this.manager.createQuery("select v from Venda v",
-				Venda.class).getResultList();
-
-		return vendas;
+        return this.manager.createQuery("select v from Venda v", Venda.class).getResultList();
 	}
 }

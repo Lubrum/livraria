@@ -11,12 +11,19 @@
 		<div id="cabecalho">
 			<h:panelGrid columns="2">
 				<h:graphicImage library="img" name="logo.png" />
-				<h:form rendered="#{usuarioLogado != null}" style="position:absolute; right: 10px;">
-					<p:themeSwitcher id="basic" style="width:165px" value="#{temaBean.tema}">
-			            <f:selectItem itemLabel="Choose Theme" itemValue="" />
-			            <f:selectItems value="#{temaBean.temas}" var="tema" itemLabel="#{tema}" itemValue="#{tema}" />
-			            <f:ajax />
-			        </p:themeSwitcher>
+				<h:form id="frmTheme" rendered="#{usuarioLogado != null}" style="position:absolute; right: 10px;">
+					<!-- below works until Primefaces 10. Source: https://primefaces.github.io/primefaces/10_0_0/#/../migrationguide/10_0_0 -->
+					<!-- <p:themeSwitcher id="basic" style="width:165px" value="#{temaBean.tema}">-->
+					<!--	<f:selectItem itemLabel="Choose Theme" itemValue="" />-->
+					<!--	<f:selectItems value="#{temaBean.temas}" var="tema" itemLabel="#{tema}" itemValue="#{tema}" />-->
+					<!--	 <f:ajax />-->
+					<!-- </p:themeSwitcher>-->
+
+					<p:selectOneMenu id="basic" value="#{temaBean.tema}">
+						<f:selectItem itemLabel="Choose Theme" itemValue="" />
+						<f:selectItems  value="#{temaBean.temas}" var="tema" itemLabel="#{tema}" itemValue="#{tema}" />
+						<p:ajax process="@this" oncomplete="PrimeFaces.changeTheme($('#frmTheme\\:basic_label').text());"/>
+					</p:selectOneMenu>
 				</h:form>
 			</h:panelGrid>
 			    
@@ -33,7 +40,7 @@
 				</h:form>
 						
 			<h1>
-				<ui:insert name="titulo"></ui:insert>
+				<ui:insert name="titulo" />
 			</h1>
 		</div>
 	
