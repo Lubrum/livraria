@@ -8,14 +8,14 @@ Configurações manuais necessárias no WildFly 10 antes da execução:
 
 - [download do wildfly 10.0.0.Final](https://www.wildfly.org/downloads/);
 - extrair conteúdo do arquivo .zip no diretório desejado para execução do servidor Wildfly (geralmente no diretório /opt no Linux);
-- criar o diretório /mysql/main em ../modules/system/layers/base/com;
+- criar o diretório /mariadb/main em ../modules/system/layers/base/org;
 - criar o arquivo module.xml com o conteúdo abaixo:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<module xmlns="urn:jboss:module:1.1" name="com.mysql">
+<module xmlns="urn:jboss:module:1.1" name="org.mariadb">
   <resources>
-    <resource-root path="mysql-connector-java-5.1.38.jar"/>
+    <resource-root path="mariadb-java-client-3.1.4.jar"/>
   </resources>
   <dependencies>
     <module name="javax.api"/>
@@ -24,8 +24,8 @@ Configurações manuais necessárias no WildFly 10 antes da execução:
 </module>
 ```
 
-- fazer download do jar mysql-connector-java-5.1.38.jar e adicionar no diretório do module.xml criado acima;
-- adicionar o driver do MySQL e o datasource no arquivo de configurações do WildFly em ../standalone/configuration/standalone.xml, conforme o exemplo destacado abaixo:
+- fazer download do jar mariadb-java-client-3.1.4.jar e adicionar no diretório do module.xml criado acima;
+- adicionar o driver do MariaDB e o datasource no arquivo de configurações do WildFly em ../standalone/configuration/standalone.xml, conforme o exemplo destacado abaixo:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:datasources:4.0">
@@ -41,8 +41,8 @@ Configurações manuais necessárias no WildFly 10 antes da execução:
         
         <!-- adicionar o trecho abaixo -->
         <datasource jndi-name="java:/livraria-ds" pool-name="livrariaDS" enabled="true" use-java-context="true">
-            <connection-url>jdbc:mysql://localhost:3311/livrariadb?createDatabaseIfNotExist=true</connection-url>
-            <driver>com.mysql</driver>
+            <connection-url>jdbc:mariadb://localhost:3310/livrariadb</connection-url>
+            <driver>org.mariadb</driver>
             <pool>
                 <min-pool-size>10</min-pool-size>
                 <max-pool-size>100</max-pool-size>
@@ -61,8 +61,8 @@ Configurações manuais necessárias no WildFly 10 antes da execução:
             </driver>
             
             <!-- adicionar o trecho abaixo -->
-            <driver name="com.mysql" module="com.mysql">
-                <xa-datasource-class>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</xa-datasource-class>
+            <driver name="org.mariadb" module="org.mariadb">
+                <xa-datasource-class>org.mariadb.jdbc.MariaDbDataSource</xa-datasource-class>
             </driver>
             <!-- ========================= -->
         </drivers>
@@ -84,7 +84,7 @@ docker compose up -d
 
 No IntelliJ:
 
-- executar 'run-with-wildfly'
+- executar 'run-wildfly-10'
 
 Ou, via CLI no diretório raíz:
 
