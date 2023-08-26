@@ -76,7 +76,7 @@ Como executar o projeto:
 
 *Observação: verifique no arquivo .sh se o caminho do WildFly (WILDFLY_PATH) esta correto.*
 
-1- executar via CLI a partir do diretório raíz (livraria_in-tomcat) o comando para subir o banco de dados mariadb via docker compose:
+1- executar via CLI a partir do diretório raíz (livraria-in-tomcat) o comando para subir o banco de dados mariadb via docker compose:
 
 ```sh
 docker compose up -d
@@ -91,5 +91,7 @@ Ou, via CLI no diretório raíz:
 ```sh
 ./run-wildfly.sh
 ```
+
+> Abrir no navegador a URL da página de login: http://localhost:8080/login.xhtml
 
 *Observação: ao executar o projeto, o banco será criado vazio, adicione manualmente um usuário no banco de dados para testar o login e demais funcionalidades deste projeto de exemplo.*
