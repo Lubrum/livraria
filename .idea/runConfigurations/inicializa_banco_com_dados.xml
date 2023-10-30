@@ -2,7 +2,7 @@
   <configuration default="false" name="inicializa-banco-com-dados" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="com.caelum.livraria.dao.PopulaBanco" />
     <module name="livraria-cdi" />
-    <option name="VM_PARAMETERS" value="-Durl=jdbc:mariadb://localhost:3310/livrariadb -Duser=root -Dpassword=123" />
+    <option name="VM_PARAMETERS" value="-Durl=jdbc:mariadb://localhost:3309/livrariadb -Duser=root -Dpassword=123" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="com.caelum.livraria.dao.*" />

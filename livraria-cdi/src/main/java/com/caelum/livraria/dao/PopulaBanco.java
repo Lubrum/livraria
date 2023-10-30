@@ -9,6 +9,8 @@ import javax.persistence.EntityManager;
 
 import com.caelum.livraria.modelo.Autor;
 import com.caelum.livraria.modelo.Livro;
+import com.caelum.livraria.modelo.Usuario;
+import com.caelum.livraria.modelo.Venda;
 
 public class PopulaBanco {
 
@@ -17,6 +19,11 @@ public class PopulaBanco {
 		EntityManager em = new JPAUtil().getEntityManager();
 
 		em.getTransaction().begin();
+
+		Usuario usuario = new Usuario();
+		usuario.setEmail("123");
+		usuario.setSenha("123");
+		em.persist(usuario);
 
 		Autor assis = geraAutor("Machado de Assis");
 		em.persist(assis);
@@ -62,6 +69,16 @@ public class PopulaBanco {
 
 		em.persist(capitaes);
 		em.persist(flor);
+
+		Venda venda1 = new Venda();
+		venda1.setLivro(capitaes);
+		venda1.setQuantidade(12);
+		em.persist(venda1);
+
+		Venda venda2 = new Venda();
+		venda2.setLivro(alquemista);
+		venda2.setQuantidade(7);
+		em.persist(venda2);
 
 		em.getTransaction().commit();
 		em.close();

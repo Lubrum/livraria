@@ -1,0 +1,28 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="run-tomcat-spring-3" type="com.poratu.idea.plugins.tomcat">
+    <log_file alias="Tomcat Catalina Log" path="$USER_HOME$/.SmartTomcat/livraria-in-tomcat/livraria-spring/logs/catalina.*" />
+    <log_file alias="Tomcat Manager Log" path="$USER_HOME$/.SmartTomcat/livraria-in-tomcat/livraria-spring/logs/manager.*" />
+    <log_file alias="Tomcat Host Manager Log" path="$USER_HOME$/.SmartTomcat/livraria-in-tomcat/livraria-spring/logs/host-manager.*" />
+    <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+    <predefined_log_file enabled="true" id="Tomcat Access Log" />
+    <option name="catalinaBase" value="$USER_HOME$/.SmartTomcat/livraria-in-tomcat/livraria-spring-3" />
+    <option name="contextPath" value="/" />
+    <option name="docBase" value="$PROJECT_DIR$/livraria-spring-3/src/main/webapp" />
+    <option name="envOptions">
+      <map />
+    </option>
+    <option name="extraClassPath" value="" />
+    <option name="tomcatInfo">
+      <TomcatInfo>
+        <option name="name" value="Apache Tomcat/10.1.15" />
+        <option name="path" value="/opt/apache-tomcat-10.1.15" />
+        <option name="version" value="10.1.15.0" />
+      </TomcatInfo>
+    </option>
+    <option name="vmOptions" value="-Durl=jdbc:mariadb://localhost:3309/livrariadb -Duser=root -Dpassword=123" />
+    <module name="livraria-spring-3" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

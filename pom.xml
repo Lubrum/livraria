@@ -13,6 +13,7 @@
     <modules>
         <module>livraria-cdi</module>
         <module>livraria-spring</module>
+        <module>livraria-spring-3</module>
         <module>livraria-wildfly-10</module>
         <module>livraria-wildfly-29</module>
     </modules>
@@ -22,7 +23,8 @@
 
         <junit.version>4.13.2</junit.version>
         <all-themes.version>1.0.10</all-themes.version>
-        <primefaces.version>10.0.0-RC2</primefaces.version>
+        <primefaces.version>10.0.0</primefaces.version>
+        <maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
     </properties>
 
     <dependencies>
@@ -55,7 +57,16 @@
             <id>prime-repo</id>
             <name>Primefaces Maven Repository</name>
             <url>http://repository.primefaces.org</url>
-            <layout>default</layout>
         </repository>
     </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>${maven-dependency-plugin.version}</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
