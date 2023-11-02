@@ -20,10 +20,18 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
 
-        <spring.version>6.0.12</spring.version>
-        <mariadb.version>3.2.0</mariadb.version>
         <hibernate.version>6.3.1.Final</hibernate.version>
         <jakartaee-api.version>10.0.0</jakartaee-api.version>
+        <jakarta.el-api.version>5.0.1</jakarta.el-api.version>
+        <jakarta.faces>4.0.4</jakarta.faces>
+        <jakarta.json.bind-api.version>3.0.0</jakarta.json.bind-api.version>
+        <jakarta.servlet-api.version>6.0.0</jakarta.servlet-api.version>
+        <jakarta.servlet.jsp-api.version>3.1.1</jakarta.servlet.jsp-api.version>
+        <mariadb.version>3.2.0</mariadb.version>
+        <primefaces.version>13.0.0</primefaces.version>
+        <spring.version>6.0.12</spring.version>
+        <yasson.version>3.0.0</yasson.version>
+        <weld-servlet-shaded.version>5.1.0.Final</weld-servlet-shaded.version>
     </properties>
 
     <dependencies>
@@ -72,53 +80,53 @@
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>jakarta.faces</artifactId>
-            <version>4.0.4</version>
+            <version>${jakarta.faces}</version>
         </dependency>
 
         <dependency>
             <groupId>jakarta.json.bind</groupId>
             <artifactId>jakarta.json.bind-api</artifactId>
-            <version>3.0.0</version>
+            <version>${jakarta.json.bind-api.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>yasson</artifactId>
-            <version>3.0.0</version>
+            <version>${yasson.version}</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>org.jboss.weld.servlet</groupId>
             <artifactId>weld-servlet-shaded</artifactId>
-            <version>5.1.0.Final</version>
+            <version>${weld-servlet-shaded.version}</version>
         </dependency>
 
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
-            <version>6.0.0</version>
+            <version>${jakarta.servlet-api.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>jakarta.servlet.jsp</groupId>
             <artifactId>jakarta.servlet.jsp-api</artifactId>
-            <version>3.1.1</version>
+            <version>${jakarta.servlet.jsp-api.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>jakarta.el</groupId>
             <artifactId>jakarta.el-api</artifactId>
-            <version>5.0.1</version>
+            <version>${jakarta.el-api.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>13.0.0</version>
+            <version>${primefaces.version}</version>
             <classifier>jakarta</classifier>
         </dependency>
     </dependencies>

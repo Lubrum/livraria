@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="inicializa-banco-com-dados" type="Application" factoryName="Application">
+  <configuration default="false" name="init-database" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="com.caelum.livraria.dao.PopulaBanco" />
     <module name="livraria-cdi" />
     <option name="VM_PARAMETERS" value="-Durl=jdbc:mariadb://localhost:3309/livrariadb -Duser=root -Dpassword=123" />

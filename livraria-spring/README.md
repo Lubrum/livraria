@@ -27,4 +27,8 @@ docker compose up -d
 
 > Abrir no navegador a URL da página de login: http://localhost:8080/login.xhtml
 
-*Observação: ao executar o projeto, o banco será criado vazio, adicione manualmente um usuário no banco de dados para testar o login e demais funcionalidades deste projeto de exemplo.*
+*Observação: ao executar o projeto, o banco será criado vazio.*
+
+*Adicione manualmente um usuário no banco de dados para testar o login e demais funcionalidades deste projeto de exemplo.*
+
+*Ou, se preferir, execute no IntelliJ a configuração 'init-database', que inicializa o banco de dados com algumas informações e com usuário e senha 123/123. Verifique se a configuração está com o url do banco de dados que será utilizado, conforme descrito no docker-compose.yml.*

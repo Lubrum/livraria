@@ -6,12 +6,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 
 import jakarta.inject.Inject;
+
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
 @Controller
 public class AutorBean implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	private Autor autor = new Autor();

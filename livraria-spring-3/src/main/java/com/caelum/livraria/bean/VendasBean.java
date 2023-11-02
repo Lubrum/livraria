@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,7 @@ import java.util.List;
 @Controller
 public class VendasBean implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	@PersistenceContext

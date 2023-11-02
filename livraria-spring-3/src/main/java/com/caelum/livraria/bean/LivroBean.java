@@ -12,12 +12,15 @@ import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.validator.ValidatorException;
 import jakarta.inject.Inject;
+
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
 @Controller
 public class LivroBean implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	private Livro livro = new Livro();

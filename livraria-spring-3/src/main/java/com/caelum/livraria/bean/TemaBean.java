@@ -4,12 +4,14 @@ import org.springframework.stereotype.Controller;
 
 import jakarta.enterprise.context.SessionScoped;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 @Controller
 @SessionScoped
 public class TemaBean implements Serializable {
 	
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	private String tema = "vader";

@@ -7,11 +7,14 @@ import org.springframework.stereotype.Controller;
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.context.FacesContext;
 import jakarta.inject.Inject;
+
+import java.io.Serial;
 import java.io.Serializable;
 
 @Controller
 public class LoginBean implements Serializable {
 	
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	private final Usuario usuario = new Usuario();

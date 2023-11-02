@@ -6,12 +6,15 @@ import org.springframework.stereotype.Repository;
 import jakarta.annotation.PostConstruct;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
 @Repository
 public class LivroDao implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	@PersistenceContext
