@@ -1,46 +1,44 @@
 package com.caelum.livraria.modelo;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 @Entity
 public class Usuario implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue
-	private Integer id;
-	private String email;
-	private String senha;
-	
-	public String getEmail() {
-		return email;
-	}
+    @Id
+    @GeneratedValue
+    private Integer id;
+    private String email;
+    private String senha;
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-		public Integer getId() {
-		return id;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public String getSenha() {
-		return senha;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
-	
-	
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
 
 }

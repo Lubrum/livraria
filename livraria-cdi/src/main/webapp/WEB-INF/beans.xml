@@ -1,5 +1,5 @@
 <beans>
-	<interceptors>
-		<class>com.caelum.livraria.tx.GerenciadorDeTransacao</class>
-	</interceptors>
+    <interceptors>
+        <class>com.caelum.livraria.tx.GerenciadorDeTransacao</class>
+    </interceptors>
 </beans>

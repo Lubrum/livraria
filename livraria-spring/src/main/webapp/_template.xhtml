@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<!DOCTYPE html PUBLIC
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns="http://www.w3.org/1999/xhtml">
 
 <h:head/>
 <h:body>
     <div id="cabecalho">
         <h:panelGrid columns="2">
             <h:graphicImage library="img" name="logo.png"/>
-                <h:form id="frmTheme" rendered="#{usuarioLogado != null}" style="position:absolute; right: 10px;">
-                    <!-- below works until Primefaces 10. Source: https://primefaces.github.io/primefaces/10_0_0/#/../migrationguide/10_0_0 -->
-                    <!-- <p:themeSwitcher id="basic" style="width:165px" value="#{temaBean.tema}">-->
-                    <!--	<f:selectItem itemLabel="Choose Theme" itemValue="" />-->
-                    <!--	<f:selectItems value="#{temaBean.temas}" var="tema" itemLabel="#{tema}" itemValue="#{tema}" />-->
-                    <!--	<f:ajax />-->
-                    <!-- </p:themeSwitcher>-->
+            <h:form id="frmTheme" rendered="#{usuarioLogado != null}" style="position:absolute; right: 10px;">
+                <!-- below works until Primefaces 10. Source: https://primefaces.github.io/primefaces/10_0_0/#/../migrationguide/10_0_0 -->
+                <!-- <p:themeSwitcher id="basic" style="width:165px" value="#{temaBean.tema}">-->
+                <!--	<f:selectItem itemLabel="Choose Theme" itemValue="" />-->
+                <!--	<f:selectItems value="#{temaBean.temas}" var="tema" itemLabel="#{tema}" itemValue="#{tema}" />-->
+                <!--	<f:ajax />-->
+                <!-- </p:themeSwitcher>-->
 
-                    <p:selectOneMenu id="basic" value="#{temaBean.tema}">
-                        <f:selectItem itemLabel="Choose Theme" itemValue=""/>
-                        <f:selectItems value="#{temaBean.temas}" var="tema" itemLabel="#{tema}" itemValue="#{tema}"/>
-                        <p:ajax process="@this" oncomplete="PrimeFaces.changeTheme($('#frmTheme\\:basic_label').text());"/>
-                    </p:selectOneMenu>
-                </h:form>
+                <p:selectOneMenu id="basic" value="#{temaBean.tema}">
+                    <f:selectItem itemLabel="Choose Theme" itemValue=""/>
+                    <f:selectItems value="#{temaBean.temas}" var="tema" itemLabel="#{tema}" itemValue="#{tema}"/>
+                    <p:ajax process="@this" oncomplete="PrimeFaces.changeTheme($('#frmTheme\\:basic_label').text());"/>
+                </p:selectOneMenu>
+            </h:form>
         </h:panelGrid>
 
         <p:growl id="messages" showDetail="true" autoUpdate="true"/>
@@ -41,7 +41,7 @@
         </h:form>
 
         <h1>
-            <ui:insert name="titulo" />
+            <ui:insert name="titulo"/>
         </h1>
     </div>
 

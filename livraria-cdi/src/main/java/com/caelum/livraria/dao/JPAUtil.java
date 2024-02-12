@@ -8,20 +8,20 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class JPAUtil {
-	static EntityManagerFactory emf;
+    static EntityManagerFactory emf;
 
-	static {
-		emf = Persistence.createEntityManagerFactory("livraria");
-	}
+    static {
+        emf = Persistence.createEntityManagerFactory("livraria");
+    }
 
-	@Produces
-	@RequestScoped
-	public EntityManager getEntityManager() {
-		return emf.createEntityManager();
-	}
+    @Produces
+    @RequestScoped
+    public EntityManager getEntityManager() {
+        return emf.createEntityManager();
+    }
 
-	public void close(@Disposes EntityManager em) {
-		em.close();
-	}
+    public void close(@Disposes EntityManager em) {
+        em.close();
+    }
 
 }

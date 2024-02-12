@@ -1,7 +1,6 @@
 package com.caelum.livraria.util;
 
 import com.caelum.livraria.modelo.Usuario;
-
 import jakarta.faces.application.NavigationHandler;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.PhaseEvent;

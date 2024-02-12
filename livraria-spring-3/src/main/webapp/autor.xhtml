@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns="http://www.w3.org/1999/xhtml">
 
 <ui:composition template="_template.xhtml">
 
@@ -30,7 +30,8 @@
                     <p:message for="nome" id="messageNome"/>
 
                     <p:outputLabel value="Email:" for="email"/>
-                    <p:inputText id="email" value="#{autorBean.autor.email}" required="true" validatorMessage="Email inválido">
+                    <p:inputText id="email" value="#{autorBean.autor.email}" required="true"
+                                 validatorMessage="Email inválido">
                         <f:attribute name="type" value="email"/>
                         <f:passThroughAttribute name="placeholder" value="Email do autor"/>
                         <f:validateRegex pattern=".+@.+"/>
@@ -38,7 +39,8 @@
                     </p:inputText>
                     <p:message for="email" id="messageEmail"/>
 
-                    <p:commandButton value="Gravar" action="#{autorBean.gravar}" process="@form" update="@form :formTabelaAutors"/>
+                    <p:commandButton value="Gravar" action="#{autorBean.gravar}" process="@form"
+                                     update="@form :formTabelaAutors"/>
                 </h:panelGrid>
             </p:fieldset>
         </h:form>

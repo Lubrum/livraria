@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -20,12 +20,13 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <spring.version>5.3.29</spring.version>
+        <spring.version>5.3.31</spring.version>
         <javax-inject.version>1</javax-inject.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
         <mariadb.version>3.1.4</mariadb.version>
         <hibernate.version>5.6.15.Final</hibernate.version>
         <jsf.version>2.2.20</jsf.version>
+        <javaee-api.version>8.0.1</javaee-api.version>
     </properties>
 
     <dependencies>
@@ -98,6 +99,13 @@
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${javaee-api.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

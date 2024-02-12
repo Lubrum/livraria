@@ -1,46 +1,44 @@
 package com.caelum.livraria.bean;
 
-import java.io.Serializable;
-import java.util.List;
+import com.caelum.livraria.modelo.Venda;
+import org.primefaces.model.chart.BarChartModel;
+import org.primefaces.model.chart.ChartSeries;
 
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
-
-import org.primefaces.model.chart.BarChartModel;
-import org.primefaces.model.chart.ChartSeries;
-
-import com.caelum.livraria.modelo.Venda;
+import java.io.Serializable;
+import java.util.List;
 
 @Named
 @ViewScoped
 public class VendasBean implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Inject
-	private EntityManager manager;
+    @Inject
+    private EntityManager manager;
 
-	public BarChartModel getVendasModel() {
+    public BarChartModel getVendasModel() {
 
-		BarChartModel model = new BarChartModel();
-		model.setAnimate(true);
+        BarChartModel model = new BarChartModel();
+        model.setAnimate(true);
 
-		ChartSeries vendaSerie = new ChartSeries();
-		vendaSerie.setLabel("Vendas 2016");
+        ChartSeries vendaSerie = new ChartSeries();
+        vendaSerie.setLabel("Vendas 2016");
 
-		List<Venda> vendas = getVendas();
-		for (Venda venda : vendas) {
-			vendaSerie.set(venda.getLivro().getTitulo(), venda.getQuantidade());
-		}
+        List<Venda> vendas = getVendas();
+        for (Venda venda : vendas) {
+            vendaSerie.set(venda.getLivro().getTitulo(), venda.getQuantidade());
+        }
 
-		model.addSeries(vendaSerie);
+        model.addSeries(vendaSerie);
 
-		return model;
-	}
+        return model;
+    }
 
-	public List<Venda> getVendas() {
+    public List<Venda> getVendas() {
         return this.manager.createQuery("select v from Venda v", Venda.class).getResultList();
-	}
+    }
 }

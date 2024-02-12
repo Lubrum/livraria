@@ -1,11 +1,10 @@
 package com.caelum.livraria.dao;
 
 import com.caelum.livraria.modelo.Livro;
-import org.springframework.stereotype.Repository;
-
 import jakarta.annotation.PostConstruct;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import org.springframework.stereotype.Repository;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -14,37 +13,37 @@ import java.util.List;
 @Repository
 public class LivroDao implements Serializable {
 
-	@Serial
-	private static final long serialVersionUID = 1L;
+    @Serial
+    private static final long serialVersionUID = 1L;
 
-	@PersistenceContext
-	EntityManager em;
-	
-	private DAO<Livro> dao;
-	
-	@PostConstruct
-	void init() {
-		this.dao = new DAO<>(this.em, Livro.class);
-	}
+    @PersistenceContext
+    EntityManager em;
 
-	public Livro buscaPorId(Integer livroId) {
-		return this.dao.buscaPorId(livroId);
-	}
+    private DAO<Livro> dao;
 
-	public void adiciona(Livro livro) {
-		this.dao.adiciona(livro);
-	}
+    @PostConstruct
+    void init() {
+        this.dao = new DAO<>(this.em, Livro.class);
+    }
 
-	public void atualiza(Livro livro) {
-		this.dao.atualiza(livro);
-	}
+    public Livro buscaPorId(Integer livroId) {
+        return this.dao.buscaPorId(livroId);
+    }
 
-	public void remove(Livro livro) {
-		this.dao.remove(livro);
-	}
+    public void adiciona(Livro livro) {
+        this.dao.adiciona(livro);
+    }
 
-	public List<Livro> listaTodos() {
-		return this.dao.listaTodos();
-	}
+    public void atualiza(Livro livro) {
+        this.dao.atualiza(livro);
+    }
+
+    public void remove(Livro livro) {
+        this.dao.remove(livro);
+    }
+
+    public List<Livro> listaTodos() {
+        return this.dao.listaTodos();
+    }
 
 }

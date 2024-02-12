@@ -7,7 +7,8 @@ Pré-requisitos:
 Configurações manuais necessárias no WildFly 10 antes da execução:
 
 - [download do wildfly 10.0.0.Final](https://www.wildfly.org/downloads/);
-- extrair conteúdo do arquivo .zip no diretório desejado para execução do servidor Wildfly (geralmente no diretório /opt no Linux);
+- extrair conteúdo do arquivo .zip no diretório desejado para execução do servidor Wildfly (geralmente no diretório /opt
+  no Linux);
 - criar o diretório /mariadb/main em ../modules/system/layers/base/org;
 - criar o arquivo module.xml com o conteúdo abaixo:
 
@@ -25,7 +26,8 @@ Configurações manuais necessárias no WildFly 10 antes da execução:
 ```
 
 - fazer download do jar mariadb-java-client-3.1.4.jar e adicionar no diretório do module.xml criado acima;
-- adicionar o driver do MariaDB e o datasource no arquivo de configurações do WildFly em ../standalone/configuration/standalone.xml, conforme o exemplo destacado abaixo:
+- adicionar o driver do MariaDB e o datasource no arquivo de configurações do WildFly em
+  ../standalone/configuration/standalone.xml, conforme o exemplo destacado abaixo:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:datasources:4.0">
@@ -70,13 +72,15 @@ Configurações manuais necessárias no WildFly 10 antes da execução:
 </subsystem>
 ```
 
-Observação: utilize o seu usuário e senha de conexão com o banco em user-name e password e sua URL de conexão com o banco em connection-url.
+Observação: utilize o seu usuário e senha de conexão com o banco em user-name e password e sua URL de conexão com o
+banco em connection-url.
 
 Como executar o projeto:
 
 *Observação: verifique no arquivo .sh se o caminho do WildFly (WILDFLY_PATH) esta correto.*
 
-1- executar via CLI a partir do diretório raíz (livraria-in-tomcat) o comando para subir o banco de dados mariadb via docker compose:
+1- executar via CLI a partir do diretório raíz (livraria-in-tomcat) o comando para subir o banco de dados mariadb via
+docker compose:
 
 ```sh
 docker compose up -d
@@ -94,4 +98,5 @@ Ou, via CLI no diretório raíz:
 
 > Abrir no navegador a URL da página de login: http://localhost:8080/login.xhtml
 
-*Observação: ao executar o projeto, o banco será criado vazio, adicione manualmente um usuário no banco de dados para testar o login e demais funcionalidades deste projeto de exemplo.*
+*Observação: ao executar o projeto, o banco será criado vazio, adicione manualmente um usuário no banco de dados para
+testar o login e demais funcionalidades deste projeto de exemplo.*

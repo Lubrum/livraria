@@ -1,46 +1,45 @@
 package com.caelum.livraria.dao;
 
-import java.io.Serializable;
-import java.util.List;
-
+import com.caelum.livraria.modelo.Autor;
 import jakarta.annotation.PostConstruct;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
-import com.caelum.livraria.modelo.Autor;
+import java.io.Serializable;
+import java.util.List;
 
 @Stateless //EJB
 public class AutorDao implements Serializable {
 
-	@PersistenceContext
-	EntityManager em;
+    @PersistenceContext
+    EntityManager em;
 
-	private DAO<Autor> dao;
+    private DAO<Autor> dao;
 
-	@PostConstruct
-	void init() {
-		this.dao = new DAO<>(this.em, Autor.class);
-	}
+    @PostConstruct
+    void init() {
+        this.dao = new DAO<>(this.em, Autor.class);
+    }
 
-	public void adiciona(Autor t) {
-		dao.adiciona(t);
-	}
+    public void adiciona(Autor t) {
+        dao.adiciona(t);
+    }
 
-	public void remove(Autor t) {
-		dao.remove(t);
-	}
+    public void remove(Autor t) {
+        dao.remove(t);
+    }
 
-	public void atualiza(Autor t) {
-		dao.atualiza(t);
-	}
+    public void atualiza(Autor t) {
+        dao.atualiza(t);
+    }
 
-	public List<Autor> listaTodos() {
-		return dao.listaTodos();
-	}
+    public List<Autor> listaTodos() {
+        return dao.listaTodos();
+    }
 
-	public Autor buscaPorId(Integer id) {
-		return dao.buscaPorId(id);
-	}
+    public Autor buscaPorId(Integer id) {
+        return dao.buscaPorId(id);
+    }
 
 }

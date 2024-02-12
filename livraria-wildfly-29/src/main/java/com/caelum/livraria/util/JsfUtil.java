@@ -6,10 +6,10 @@ import jakarta.faces.context.FacesContext;
 
 public class JsfUtil {
 
-	@Produces
-	@RequestScoped
-	public FacesContext getFacesContext() {
-		return FacesContext.getCurrentInstance();
-	}
+    @Produces
+    @RequestScoped
+    public FacesContext getFacesContext() {
+        return FacesContext.getCurrentInstance();
+    }
 
 }
