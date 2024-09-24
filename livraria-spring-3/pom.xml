@@ -29,7 +29,7 @@
         <jakarta.servlet.jsp-api.version>3.1.1</jakarta.servlet.jsp-api.version>
         <mariadb.version>3.2.0</mariadb.version>
         <primefaces.version>13.0.0</primefaces.version>
-        <spring.version>6.1.3</spring.version>
+        <spring.version>6.1.12</spring.version>
         <yasson.version>3.0.3</yasson.version>
         <weld-servlet-shaded.version>5.1.0.Final</weld-servlet-shaded.version>
     </properties>
