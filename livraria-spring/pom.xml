@@ -20,7 +20,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <spring.version>5.3.31</spring.version>
+        <spring.version>6.1.14</spring.version>
         <javax-inject.version>1</javax-inject.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
         <mariadb.version>3.1.4</mariadb.version>
