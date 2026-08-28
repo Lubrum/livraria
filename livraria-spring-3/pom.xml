@@ -27,7 +27,7 @@
         <jakarta.json.bind-api.version>3.0.0</jakarta.json.bind-api.version>
         <jakarta.servlet-api.version>6.0.0</jakarta.servlet-api.version>
         <jakarta.servlet.jsp-api.version>3.1.1</jakarta.servlet.jsp-api.version>
-        <mariadb.version>3.2.0</mariadb.version>
+        <mariadb.version>3.3.5</mariadb.version>
         <primefaces.version>13.0.0</primefaces.version>
         <spring.version>6.1.21</spring.version>
         <yasson.version>3.0.3</yasson.version>
