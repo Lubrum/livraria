@@ -22,7 +22,7 @@
 
         <weld-servlet.version>2.4.8.Final</weld-servlet.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
-        <mariadb.version>3.1.4</mariadb.version>
+        <mariadb.version>3.3.5</mariadb.version>
         <hibernate.version>5.6.15.Final</hibernate.version>
         <jsf.version>2.2.20</jsf.version>
     </properties>
